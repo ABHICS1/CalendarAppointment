@@ -1,0 +1,16 @@
+<h1>9 Aug 2019</h1>
+<div class = "main">
+  <h3>Event</h3>
+  <div class="addItem">
+    <input [(ngModel)] ="newItem" placeholder="Add Event" class="addText">
+    <button (click) = "pushItem()" (click) = "alert()"  >Add</button>
+  </div>
+  <ul>
+    <li *ngFor = "let i of items; let ind = index">
+      {{i}}
+      <span (click) = "removeItem(ind)">Delete</span>
+      <span (click) = "editItem(ind)" (click)="alert('are you sure')">Edit</span>
+    </li> 
+  </ul>
+
+  </div>
